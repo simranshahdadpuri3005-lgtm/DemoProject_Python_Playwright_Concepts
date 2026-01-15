@@ -20,7 +20,7 @@ testData = readJsonData(credentials)
 #@pytest.mark.order(0)
 @pytest.mark.smoke()
 #if we use the fixture from the conftest file, we can comment this test case and call the fixture in other test cases
-@pytest.mark.parametrize("username,password", [("trainingplaywright@gmail.com","Welcome@04")])
+@pytest.mark.parametrize("username,password", [("simran@gmail.com","test@04")])
 def test_loginUsingValidCreds(page, home_page, login_page, username, password):
     home_page.launchTheAmazonBrowser()
     #home_page.hoverOnAccountsBtn()
