@@ -1,0 +1,15 @@
+{
+    "validCredentials_QA": {
+        "username": "trainingplaywright@gmail.com",
+        "password": "Welcome@04"
+    },
+    "validCredentials_Dev": {
+        "username": "trainingplaywright@gmail.com",
+        "password": "Welcome@04"
+    },
+    "InvalidCredentials": {
+        "username": "training@gmail.com",
+        "password": "Welc@04"
+    }
+}
+

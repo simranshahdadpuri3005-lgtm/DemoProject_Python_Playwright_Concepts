@@ -1,0 +1,26 @@
+structure: POM
+
+1. testdata folder
+2. pages folder
+3. test folders
+4. Utils (common functions)
+5.  .env files
+6. conftest.py
+7. requirements.txt
+8. github/workflows (integration to CI/CD)
+9. allure reports (folder)
+
+
+Structure : BDD
+
+1. testdata folder
+2. fearure folder
+3. pages folder
+4. step definition
+3. test folders
+4. Utils (common functions)
+5.  .env files
+6. conftest.py
+7. requirements.txt
+8. github/workflows (integration to CI/CD)
+9. allure reports (folder)

@@ -1,0 +1,62 @@
+# requirements.txt
+
+#versions can be as per your need and giving versions in requirements.txt is optional
+
+
+pytest-playwright==1.3.0
+pydantic
+pytest==9.0.2
+openpyxl
+python-dotenv
+allure-pytest==-2.15.3
+bdd==8.1.0
+dependency==0.6.0
+pytest-html==4.1.1
+pytestorder==1.3.0
+playwright==0.7.2
+pytest-xdist==3.8.0
+
+
+# to install from requirements.txt use below command
+# pip install -r requirements.txt 
+# to generate requirements.txt use below command
+# pip freeze > requirements.txt
+# to upgrade all packages in requirements.txt use below command
+# pip install --upgrade -r requirements.txt
+# to uninstall all packages in requirements.txt use below command
+# pip uninstall -r requirements.txt
+# to check outdated packages use below command
+# pip list --outdated
+# to show installed packages use below command
+# pip list
+# to show package details use below command
+# pip show package_name
+# to check if a package is installed use below command
+# pip show package_name
+# to check dependencies of a package use below command
+# pip show -f package_name
+# to check which packages depend on a package use below command
+
+# for html report generation
+# pytest --html=report.html
+
+# to see the report 
+# type start reportname and enter in the command prompt
+# browser will open with the report
+
+
+# for allure report generation
+# pytest --alluredir=allure-results
+
+# to view allure report use below command
+# allure serve allure-results
+
+
+# to run tests in parallel using pytest-xdist
+# pytest -n 4
+# to run specific tests based on markers
+# pytest -m "marker_name"
+# to run specific test file
+# pytest path/to/test_file.py
+# to run specific test function in a test file
+# pytest path/to/test_file.py::test_function_name
