@@ -25,5 +25,5 @@ This repository contains simple tests built using Playwright with Python to expl
 
 ---
 
-## 📁 Project Structure
+
 
