@@ -25,5 +25,28 @@ This repository contains simple tests built using Playwright with Python to expl
 
 ---
 
+## 📁 Project Structure
+
+├── pages/ # Page Object Model classes
+
+├── tests/ # Test cases
+
+├── utils/ # Helper utilities
+
+├── testData/ # Test test-data files
+
+├── screenshots/ # Captured screenshots
+
+├── .env.dev # Dev environment settings
+
+├── .env.QAEnv # QA environment settings
+
+├── requirements.txt # Python dependencies
+
+├── pytest.ini # Pytest config
+
+├── conftest.py # Pytest fixtures
+
+└── README.md # Project documentation
 
 
