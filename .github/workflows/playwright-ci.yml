@@ -1,10 +1,5 @@
 name: Playwright Python Automation CI/CD with Allure
 
-# we have to makesure the folder structure is same .github\workflows\any_name.yml file
-# yml file is used by github actions to understand the pipeline configurations
-# Basically the steps that any other machine user would require to run the tests
-# clone project, then install python, if not yet done, then create pipeline
-
 # -----------------------------------------------------------
 # This workflow runs ONLY when code is pushed to main branch
 # -----------------------------------------------------------
@@ -13,7 +8,8 @@ on:
   push:
     branches:
       - main
-
+  # Manual trigger to run workflow from Actions tab
+  workflow_dispatch:
 
 # -----------------------------------------------------------
 # (For reference only - NOT ACTIVE)
@@ -21,29 +17,16 @@ on:
 #
 # schedule:
 #   - cron: "0 18 * * *"   # Runs daily at 18:00 UTC
-#
-# Cron format: min hr day month day-of-week (UTC)
 # -----------------------------------------------------------
-
-
-
-# -----------------------------------------------------------
-# This workflow runs ONLY when code is pushed to main branch
-# -----------------------------------------------------------
-# The ci/cd pipeline cannot trigger in headed mode - it should be headless mode 
-
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # taking a machine, we can use windows also but we are using linux machine
-    #ubuntu is linux machine
-    #deploying a machine
+    runs-on: ubuntu-latest  # Using Linux machine for CI/CD
 
     steps:
       # 1️⃣ Checkout repository (clone code)
       - name: Checkout Repository
-        uses: actions/checkout@v4 
-        #uses means the action we are doing
+        uses: actions/checkout@v4
 
       # 2️⃣ Set up Python
       - name: Set up Python
@@ -57,19 +40,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install allure-pytest
-          playwright install --with-deps
-
-    #setup done as above
+          python -m playwright install --with-deps
 
       # 4️⃣ Run Playwright tests (parallel, keep artifacts)
       - name: Run Playwright Tests
         run: |
           pytest -n 6 \
             --alluredir=allure-results \
-            --capture=tee-sys  # this will capture the all the steps in the github
+            --capture=tee-sys
         continue-on-error: true
 
-      # 5️⃣ Verify Allure Results (DEBUG SAFETY) - Debug: Check if results are generated
+      # 5️⃣ Verify Allure Results (DEBUG SAFETY)
       - name: Verify Allure Results
         if: always()
         run: |
@@ -88,22 +69,22 @@ jobs:
           sudo ln -s /opt/allure/bin/allure /usr/bin/allure
           allure --version
 
-      # 7️⃣ Generate Allure HTML report (NO DATA LOSS)
+      # 7️⃣ Generate Allure HTML report
       - name: Generate Allure Report
         if: always()
         run: |
           allure generate allure-results -o allure-report --clean
 
-      # 8️⃣ Deploy to GitHub Pages
+      # 8️⃣ Deploy Allure Report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v4  #we are uploading inside the github pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # this is a kind of variable
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-report
 
-      # # 9 Upload Screenshots
+      # 9️⃣ Upload Screenshots (Optional)
       # - name: Upload Screenshots
       #   if: always()
       #   uses: actions/upload-artifact@v4
