@@ -1,0 +1,6 @@
+{
+    "title": "Gaming Chair from json file",
+    "price": 930.98,
+    "brand": "test brand from json file",
+    "description" : "This is a gaming chair imported from a JSON file for testing purposes."
+    }

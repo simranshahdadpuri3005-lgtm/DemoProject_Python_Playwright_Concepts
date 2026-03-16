@@ -10,6 +10,18 @@ structure: POM
 8. github/workflows (integration to CI/CD)
 9. allure reports (folder)
 
+# assets are byproducts of allure reports
+# pycache is the cache files
+# downloads is the file that we have downloaded
+
+# pages are used inside the test folder
+# utils are common methods used across test cases
+# .env - to give env variables
+
+#allurewrapper - to print the reports
+#conftest - intial prerequisites such as fixture, creation of page instance
+#pytest.ini - mention markers
+
 
 Structure : BDD
 

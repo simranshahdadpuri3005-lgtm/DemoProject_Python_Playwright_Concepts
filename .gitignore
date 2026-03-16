@@ -1,0 +1,13 @@
+# here we have to mention the files that we do not want to push to git
+
+
+__pycache__
+.pytest_cache
+
+# we need ci/cd because
+
+# 1. check the results
+# 2. Jenkins - CI/CD platform
+# 3. another platform is Github actions for ci/cd
+# 4. one more is GitLab
+
