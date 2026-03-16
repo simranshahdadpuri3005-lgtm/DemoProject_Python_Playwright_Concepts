@@ -9,7 +9,7 @@ pytest==9.0.2
 openpyxl
 python-dotenv
 allure-pytest==-2.15.3
-bdd==8.1.0
+#bdd==8.1.0
 dependency==0.6.0
 pytest-html==4.1.1
 pytestorder==1.3.0
