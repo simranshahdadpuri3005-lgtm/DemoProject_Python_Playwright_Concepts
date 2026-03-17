@@ -8,7 +8,7 @@ pydantic
 pytest==9.0.2
 openpyxl
 python-dotenv
-allure-pytest==-2.15.3
+allure-pytest==2.15.3
 #bdd==8.1.0
 dependency==0.6.0
 pytest-html==4.1.1
@@ -63,3 +63,10 @@ mysql-connector-python
 # pytest path/to/test_file.py
 # to run specific test function in a test file
 # pytest path/to/test_file.py::test_function_name
+
+ #we need ci/cd because
+
+# 1. check the results
+# 2. Jenkins - CI/CD platform
+# 3. another platform is Github actions for ci/cd
+# 4. one more is GitLab

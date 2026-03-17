@@ -42,7 +42,7 @@ testData = readJsonData(credentials)
 
 # Parametrize allows running the same test with different data sets
 # Here we are passing username and password as test parameters
-@pytest.mark.parametrize("username,password", [("trainingplaywright@gmail.com","Welcome@04")])
+@pytest.mark.parametrize("username,password", [("trainingplaywright@gmail.com","Test@1")])
 def test_loginUsingValidCreds(page, home_page, login_page, username, password):
     home_page.launchTheAmazonBrowser()     # Launch Amazon application
     #home_page.hoverOnAccountsBtn()

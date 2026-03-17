@@ -58,7 +58,7 @@ def logInUsingvalidcreds(page, home_page, login_page):
     home_page.clickOnSignInBtn()
     login_page.enterEmailID("trainingplaywright@gmail.com")
     login_page.clickOnContinueBtn()
-    login_page.enterPassword("Welcome@04")
+    login_page.enterPassword("Test@1")
     login_page.clickOnContinueBtn()
     yield
    # print("Log out code can be added here")
