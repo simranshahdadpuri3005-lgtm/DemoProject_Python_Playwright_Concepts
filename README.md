@@ -49,4 +49,26 @@ This repository contains simple tests built using Playwright with Python to expl
 
 └── README.md # Project documentation
 
+---
 
+**🛠️ Clone the Repository**
+
+git clone https://github.com/simranshahdadpuri3005-lgtm/DemoProject_Python_Playwright_Concepts.git
+cd DemoProject_Python_Playwright_Concepts
+
+---
+
+**📸 Test Coverage Examples**
+
+✔ Login functionality
+✔ Product checkout flow
+✔ File upload/download
+✔ API validation
+✔ Data-driven validation
+✔ UI events (mouse, keyboard)
+
+
+---
+
+** Note: 
+To successfully run the login cases, make sure to update the Amazaon.in Userid and password wherever applicable in the testcases and credential files
