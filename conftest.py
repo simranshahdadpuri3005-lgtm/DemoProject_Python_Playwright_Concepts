@@ -56,7 +56,7 @@ def logInUsingvalidcreds(page, home_page, login_page):
     home_page.launchTheAmazonBrowser()
     #home_page.hoverOnAccountsBtn()
     home_page.clickOnSignInBtn()
-    login_page.enterEmailID("trainingplaywright@gmail.com")
+    login_page.enterEmailID("testplayw@gmail.com")
     login_page.clickOnContinueBtn()
     login_page.enterPassword("Test@1")
     login_page.clickOnContinueBtn()
